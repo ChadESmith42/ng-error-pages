@@ -3,4 +3,10 @@
     <p>
         The purpose of this project is to demonstrate customizable error pages using Angular 9. The error handling is provided by an Error Component and an Error Service. Each <span class="code">try / catch</span> or <span class="code">catch</span> callback passes error information to the Error Service. The call back can then route to the appropriate error message page.
     </p>
+    <p>
+        The Error Component is just a display component. It retrieves a custom error object from the Error Service. Angular has an interesting Directive called <span class="code">NgSwitch</span>, which works in conjunction with <span class="code">*ngSwitchCase</span> and <span class="code">*ngSwitchDefault</span>. The NgSwitch directive is bound to a variable from the component. In this case, it's the status code. The <span class="code">*ngSwitchCase</span> is applied to whatever HTML element that should be displayed based on the current value of the error status code.
+    </p>
+    <p>
+        Adding a new customized error page to your application is as simple as adding the appropriate <span class="code">*ngSwitchCase</span> content to the Error Component and ensuring the use-cases for that error properly pass the correct information to the Error Service. This is a flexible, extensible error handling process that any can provide dynamic messaging content without much up-keep.
+    </p>
 </article>
