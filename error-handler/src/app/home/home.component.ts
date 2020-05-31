@@ -31,6 +31,10 @@ export class HomeComponent implements OnInit {
     this.errorService.HandleError(four09.status, four09.statusText, four09.error);
   }
 
+  public imATeapot() {
+    this.errorService.HandleError(418, `I'm a teapot.`, `See  RFC 2324, Hyper Text Coffee Pot Control Protocol`);
+  }
+
   public fiveHundred() {
     const five00 = new HttpErrorResponse({ status: 500, statusText: 'Server error.', error: '0e6ad49f-cff3-4258-ba68-4e378328f8fd'});
     this.errorService.HandleError(five00.status, five00.statusText, five00.error);

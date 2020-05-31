@@ -3,6 +3,7 @@
   <button (click)="fourOhOne()" [routerLink] = "'unauthorized'" [routerLinkActive]="'active'">401 Error</button>
   <button (click)="fourOhFour()"[routerLink] = "'not-found'" [routerLinkActive]="'active'">404 Error</button>
   <button (click)="fourOhNine()" [routerLink] = "'conflict'" [routerLinkActive]="'active'">409 Error</button>
+  <button (click)="imATeapot()" [routerLink] = "'i-am-a-teapot'" [routerLinkActive]="'active'">418 Error (Look it up)</button>
   <button (click)="fiveHundred()" [routerLink] = "'server-error'" [routerLinkActive]="'active'">500 Error</button>
   <button (click)="tripleNine()" [routerLink] = "'youre-an-idiot'" [routerLinkActive]="'active'">Custom Error</button>
   <button (click)="fourHundred()"[routerLink] = "'error'" [routerLinkActive]="'active'">400/Generic Error</button>

@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'conflict', component: ErrorComponent },
   { path: 'server-error', component: ErrorComponent },
   { path: 'youre-an-idiot', component: ErrorComponent },
+  { path: 'i-am-a-teapot', component: ErrorComponent }
 ];
 
 @NgModule({
