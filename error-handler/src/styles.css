@@ -40,7 +40,6 @@ section.error-pages {
 section.info-page {
     width: calc(50vw - 64px);
     float: right;
-    height: 432px;
     padding: 12px 24px 16px 40px;
     background-color: var(--dark);
     color: var(--light);
