@@ -1,1 +1,63 @@
-<p>error works!</p>
+<ng-container *ngIf="error$ | async as error" [ngSwitch]="error.status">
+    <section class="dark-card" *ngSwitchCase="401">
+        <h1 class="error-title">Who are you again?</h1>
+        <p class="error-feedback">Sorry, but we'd like to get to know you better before we share that with you.</p>
+        <p class="error-feedback">Can you login again? Or ask your administrator to bring you into the Circle of Trust?</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <section class="dark-card" *ngSwitchCase="404">
+        <h1 class="error-title">I just had that in my hands a few minutes ago!</h1>
+        <p class="error-feedback">Sorry, but I seemed to have misplaced that file.</p>
+        <p class="error-feedback">Give me a few minutes to find it. Maybe go back the way you came and try again?</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <section class="dark-card" *ngSwitchCase="409">
+        <h1 class="error-title">I'm getting some mixed signals here.</h1>
+        <p class="error-feedback">Sorry, but I thought we were doing that other thing instead of this thing?</p>
+        <p class="error-feedback">Somehow, we've gotten our wires crossed. Let's double check this before we try to proceed.</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <section class="dark-card" *ngSwitchCase="500">
+        <h1 class="error-title">You just can't find good help these days!</h1>
+        <p class="error-feedback">I'm really sorry. Against my objections, the 'Powers-That-Be' farmed out that critical function to Less Than Trustworthy People.</p>
+        <p class="error-feedback">We all make mistakes. Why don't we try one more time? Maybe they're just too busy counting the millions we pay them to check if the server is running?</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <section class="dark-card" *ngSwitchCase="999">
+        <h1 class="error-title">It's not us, it's you.</h1>
+        <p class="error-feedback">This could be 1 of 2 issues: a PEBKAC or an ID-Ten-Tee.</p>
+        <p class="error-feedback">We've included some extra information below to help you figure it out. Everyone here knows, you need all of the help you can get.</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <section class="dark-card" *ngSwitchDefault>
+        <h1 class="error-title">Well, this is awkward!</h1>
+        <p class="error-feedback">Something went seriously wrong if you're seeing this.</p>
+        <p class="error-feedback">Not like, 'Oh, God, oh God, we're all gonna die' wrong, or even 'We have to talk about your flare' wrong. More like, I-could-have-sworn-there-were-more-donuts wrong.</p>
+        <p class="error-feedback">
+            <span class="error-code">Status: {{ error.status }}</span>
+            <span class="error-message">Error: {{ error.message }}</span>
+            <span class="error-trace">Reference: {{ error.traceId }} </span>
+        </p>
+    </section>
+    <button class="info" [routerLink]="'/'">Reset</button>
+</ng-container>
