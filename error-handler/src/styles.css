@@ -1,1 +1,193 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Proza+Libre&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --primary: #9da1a3;
+    --info: #322c34;
+    --success: #64ab69;
+    --warning: #e29b31;
+    --danger: #f44336;
+    --light: #f9f9f7;
+    --light-accent: #909496;
+    --brand: rgba(157, 161, 163, 1);
+    --dark-accent: rgba(124, 121, 129, 1);
+    --dark: rgba(50, 44, 52, 1);
+    --white: #fefefe;
+    --black: #010101;
+}
+
+
+h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--black);
+}
+
+html {
+    background-color: rgba(157, 161, 163, 0.55);
+}
+
+* {
+    font-family: 'Proza Libre', sans-serif;
+    color: var(--black);
+}
+
+section.error-pages {
+    width: calc(50vw - 64px);
+    float: left;
+ }
+
+section.info-page {
+    width: calc(50vw - 64px);
+    float: right;
+    height: 432px;
+    padding: 12px 24px 16px 40px;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px;
+}
+
+section.info-page article {
+    color: var(--white);
+}
+
+section.info-page article h1 {
+    color: var(--white);
+    padding: 12px 24px 8px 40px;
+    font-size: 32px;
+
+}
+
+section.info-page article p {
+    color: var(--white);
+    padding: 12px 24px 8px 40px;
+    font-size: 18px;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--info);
+    font-size: 12px;
+    cursor: pointer;
+    margin: 10px 12px;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: var(--dark-accent);
+    color: var(--black);
+    box-shadow: 4px 4px 2px rgba(245, 245, 245, 0.42);
+}
+
+button.primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+button.primary:hover {
+    color: var(--white);
+    background-color: var(--dark-accent);
+    box-shadow: 4px 4px 2px rgba(153, 153, 153, 0.42);
+}
+
+button.info {
+    color: var(--white);
+    background-color: var(--info);
+}
+
+button.info:hover {
+    color: var(--white);
+    background-color: var(--dark-accent);
+    box-shadow: 4px 4px 2px rgba(53, 53, 53, 0.42);
+}
+
+button.active {
+    color: var(--black);
+    background-color: var(--warning);
+}
+
+button.warning {
+    color: var(--white);
+    background-color: var(--warning);
+}
+
+.default-container, .default-container h1 {
+    color: var(--light);
+    background-color: var(--dark);
+    font-size: 32px;
+    width: calc(100% - 64px);
+    padding: 12px 24px 8px 40px;
+    border-radius: 8px;
+}
+
+.dark-container {
+    color: var(--white);
+    background-color: var(--dark-accent);
+    width: calc(100% - 64px);
+    padding: 12px 24px 16px 40px;
+    margin: 8px auto;
+    border-radius: 8px;
+}
+
+.light-container {
+    color: var(--black);
+    background-color: var(--light-accent);
+    width: calc(100% - 64px);
+    padding: 12px 24px 16px 40px;
+    margin: 8px auto;
+    border-radius: 8px;
+}
+
+.dark-card {
+    width: calc(100% - 64px);
+    padding: 12px 24px 16px 40px;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px;
+}
+
+.dark-card .error-title,
+.dark-card .error-feedback {
+    color: var(--light);
+}
+
+
+.dark-card .error-feedback .error-code,
+.dark-card .error-feedback .error-message {
+    color: var(--white);
+}
+
+.dark-card .error-feedback .error-trace {
+    color: var(--danger);
+}
+
+.error-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+}
+
+.error-feedback {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 20px;
+    clear: both;
+}
+
+.error-code, .error-message, .error-trace {
+    font-family: 'Proza Libre', sans-serif;
+    display: block;
+    font-size: 16px;
+    clear: both;
+}
+
+.code {
+    font-family: 'VT323', monospace;
+    font-weight: 600;
+    color: var(--black);
+    padding: 1px 4px;
+    border-radius: 2px;
+    background-color: var(--light-accent);
+}
